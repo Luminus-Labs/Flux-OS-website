@@ -244,6 +244,7 @@
             flex-direction: column;
             text-align: center;
             position: relative;
+            z-index: 1;
         }
 
         .hero-content-wrapper {
@@ -280,6 +281,7 @@
             width: 100%;
             height: 100%;
             background: var(--bg-color);
+            /* z-index: -1; <-- REMOVED TO FIX BLACK LINE */
         }
 
         .glitch-hover::before {

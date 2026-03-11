@@ -10,7 +10,7 @@
 
 ## 🚀 Current Status
 
-**Version:** 0.0.1--BETA 
+**Version:** 0.0.1--BETA  
 **Base:** Ubuntu 24.04 LTS (Lubuntu)  
 **Architecture:** amd64  
 **Desktop Environment:** Custom LXQt Modification  

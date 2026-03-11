@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flux-OS | Nothing Desktop Experience</title>
-    <meta name="description" content="FLUX-OS: A 32-bit, hobbyist operating system written from scratch. Minimalist, typography-driven, and philosophically bare metal.">
+    <meta name="description" content="FLUX-OS: A heavily customized, minimalist Linux-based operating system. Philosophy of digital minimalism—stripping away the unnecessary.">
 
     <!-- Fonts: Loading LOCAL NDOT.otf and NTYPE.otf -->
     <link rel="preload" href="NDOT.otf" as="font" type="font/otf" crossorigin>
@@ -783,7 +783,7 @@
             <ul>
                 <li><a href="#status">Status</a></li>
                 <li><a href="#vision">Vision</a></li>
-                <li><a href="#build">Build</a></li>
+                <li><a href="#build">About</a></li>
                 <li><a href="#license">License</a></li>
             </ul>
         </nav>
@@ -798,9 +798,9 @@
     <section class="hero">
         <div class="container hero-content-wrapper">
             <div class="badges-container">
-                <div class="badge version"><span class="label">VERSION:</span> <span class="value">2.3-PRE-ALPHA</span></div>
-                <div class="badge language"><span class="label">LANGUAGE:</span> <span class="value">C + ASSEMBLY</span></div>
-                <div class="badge status"><span class="label">STATUS:</span> <span class="value">TEXT-MODE</span></div>
+                <div class="badge version"><span class="label">VERSION:</span> <span class="value">0.0.1--BETA</span></div>
+                <div class="badge language"><span class="label">BASE:</span> <span class="value">UBUNTU 24.04</span></div>
+                <div class="badge status"><span class="label">STATUS:</span> <span class="value">ACTIVE-DEV</span></div>
                 <div class="badge license"><span class="label">LICENSE:</span> <span class="value">PROPRIETARY</span></div>
             </div>
 
@@ -810,7 +810,7 @@
                 <span class="cursor" id="heroCursor"></span>
             </div>
             
-            <p>A 32-bit, hobbyist operating system written from scratch in C and x86 Assembly. It aims to be a "Nothing OS" inspired desktop environment—minimalist, typography-driven, and philosophically bare metal.</p>
+            <p>A heavily customized, minimalist Linux-based operating system. It represents a philosophy of digital minimalism—stripping away the unnecessary to reveal something purer, leaner, and more intentional.</p>
             
             <a href="https://github.com/whiteo55/Flux-OS" target="_blank" class="cta-button">View Source Code</a>
 
@@ -830,27 +830,19 @@
                 <div class="line"></div>
             </div>
             <div class="content-block">
-                <p><strong>Version:</strong> 2.3 Pre-Alpha<br>
-                <strong>Kernel:</strong> Operational<br>
-                <strong>Graphics:</strong> Text Mode Only (VBE Pending)</p>
+                <p><strong>Version:</strong> 1.0.0<br>
+                <strong>Base System:</strong> Ubuntu 24.04 LTS (Lubuntu)<br>
+                <strong>Architecture:</strong> amd64<br>
+                <strong>Desktop Environment:</strong> Custom LXQt Modification</p>
                 <br>
-                <p>The system boots successfully via GRUB into a protected-mode kernel. It currently displays diagnostic information via VGA text (80x25). The graphics library (GFX) is implemented but awaiting VESA BIOS Extensions (VBE) initialization to switch to a graphical framebuffer.</p>
+                <p>Flux-OS has been transformed from its origin into something distinctly its own. We've stripped, rebuilt, and reimagined every layer to create a streamlined experience that honors the raw potential of the void.</p>
 
-                <h3>Development Roadmap</h3>
+                <h3>What Makes Flux Different</h3>
                 <ul>
-                    <li><strong>Phase 1: Bootstrapping (Complete)</strong> — Custom Assembly Bootloader (Multiboot v1), Protected Mode Transition, GDT and Basic Memory Management.</li>
-                    <li><strong>Phase 2: Kernel Core (Complete)</strong> — C Kernel Entry Point, VGA Text Driver, Multiboot Info Parsing.</li>
-                    <li><strong>Phase 3: Graphics System (In Progress)</strong> — VESA BIOS Extensions (VBE) Driver, Framebuffer Memory Mapping, Software Rendering Library (GFX).</li>
-                    <li><strong>Phase 4: User Interface (Planned)</strong> — Desktop Environment (FluxWM), Window Management, Taskbar and System Tray.</li>
-                    <li><strong>Phase 5: Hardware Interaction (Future)</strong> — PS/2 Keyboard Driver, Serial Mouse Driver, PIT/RTC Timer.</li>
-                </ul>
-
-                <h3>Known Issues</h3>
-                <ul class="known-issues">
-                    <li><strong>VBE Initialization Failure:</strong> <span>The kernel cannot currently retrieve the framebuffer address from GRUB. The <code>mb_info->vbe_mode_info</code> pointer is returning NULL. This forces the OS to fall back to VGA text mode (80x25).</span></li>
-                    <li><strong>QEMU Graphics:</strong> <span>Hardcoding framebuffer addresses (e.g., <code>0xFD000000</code>) has not yielded visual results. The VBE protocol handshake needs debugging.</span></li>
-                    <li><strong>Memory Layout:</strong> <span>The linker script assumes a 1MB load address. If GRUB loads the kernel higher due to high memory maps, the kernel may panic.</span></li>
-                    <li><strong>Interrupts:</strong> <span>The IDT (Interrupt Descriptor Table) is currently empty. Any interrupt or exception will cause a Triple Fault and reboot.</span></li>
+                    <li><strong>Radical Simplification:</strong> Removed unnecessary packages, services, and bloat</li>
+                    <li><strong>Custom Desktop Environment:</strong> Heavily modified LXQt with our own visual language</li>
+                    <li><strong>Performance First:</strong> Optimized for speed, low memory usage, and responsiveness</li>
+                    <li><strong>Philosophy-Driven:</strong> Every decision rooted in the belief that less is more</li>
                 </ul>
             </div>
         </div>
@@ -867,9 +859,9 @@
                 <p>To create a desktop experience that feels like a digital instrument cluster. No bloat. No clutter. Just raw interaction between user and machine.</p>
                 
                 <h3>Design Philosophy</h3>
-                <p><strong>1. Minimalism over Convenience:</strong> We prioritize raw code efficiency and resource speed over user hand-holding. The OS should feel like a tool for experts, not a toy for the masses.</p>
-                <p><strong>2. Typography as UI:</strong> The interface is driven by a custom bitmap font system. The screen is a canvas for text and geometry, not stock icons and heavy assets.</p>
-                <p><strong>3. Bare Metal Truth:</strong> FLUX-OS does not hide the hardware. It exposes the Multiboot memory maps, the framebuffer addresses, and the interrupt descriptor tables to the user (if they dare to look).</p>
+                <p><strong>1. Minimalism over Convenience:</strong> We prioritize raw efficiency and resource speed over hand-holding. The OS should feel like a tool for experts, not a toy for the masses.</p>
+                <p><strong>2. Typography as UI:</strong> The interface is driven by custom typography. The screen is a canvas for text and geometry, not stock icons and heavy assets.</p>
+                <p><strong>3. The Void as Canvas:</strong> FLUX-OS embraces emptiness not as absence, but as space full of potential—waiting for the user to shape their digital environment.</p>
             </div>
         </div>
     </section>
@@ -878,61 +870,29 @@
     <section id="build">
         <div class="container">
             <div class="section-header">
-                <h2 class="dot-text">BUILD INSTRUCTIONS</h2>
+                <h2 class="dot-text">ABOUT FLUX</h2>
                 <div class="line"></div>
             </div>
             <div class="content-block">
-                <h3>Requirements</h3>
+                <h3>What is Flux-OS?</h3>
+                <p>Flux-OS is a heavily customized, minimalist Linux-based operating system built upon Ubuntu 24.04 LTS (Lubuntu). It has been transformed from its origin into something distinctly its own—stripped, rebuilt, and reimagined.</p>
+
+                <h3>Technical Details</h3>
                 <ul>
-                    <li><strong>OS:</strong> Linux (Ubuntu 22.04 LTS recommended)</li>
-                    <li><strong>Compiler:</strong> GCC (with <code>i386</code> multilib support)</li>
-                    <li><strong>Assembler:</strong> GNU Assembler (GAS)</li>
-                    <li><strong>Linker:</strong> GNU Linker (LD)</li>
-                    <li><strong>Bootloader:</strong> GRUB 2 (via <code>grub-mkrescue</code>)</li>
-                    <li><strong>Emulator:</strong> QEMU (for testing)</li>
+                    <li><strong>Base:</strong> Ubuntu 24.04 LTS (Lubuntu 24.04.4)</li>
+                    <li><strong>Architecture:</strong> amd64</li>
+                    <li><strong>Desktop Environment:</strong> Custom LXQt Modification</li>
+                    <li><strong>Package Management:</strong> APT</li>
                 </ul>
 
-                <h3>Quick Start</h3>
-                <pre style="background: var(--surface-color); padding: 15px; border-radius: 8px; color: var(--text-primary); overflow-x: auto; border: 1px solid var(--border-color);">
-# Clone the repository
-git clone https://github.com/whiteo55/Flux-OS.git
-cd Flux-OS
-
-# Build the Operating System
-bash build.sh
-
-# Run in QEMU (Requires X11 Display)
-DISPLAY=:1 qemu-system-i386 -m 512 -cdrom flux-os.iso -vga std</pre>
-
-                <h3>Project Structure</h3>
-                <div class="project-structure">
-                    <div class="tree-item"><span class="tree-name folder">Flux-OS/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><span class="tree-name folder">src/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name folder">boot/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">Assembly bootloader...</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">boot.s</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name folder">kernel/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">Main kernel logic...</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">kernel.c</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name folder">graphics/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">Software rendering...</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">gfx.c</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-icon">|</span><span class="tree-name">gfx.h</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><span class="tree-name folder">isodir/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name folder">boot/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name folder">grub/</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name">grub.cfg</span></div>
-                    <div class="tree-item"><div class="tree-indent"></div><div class="tree-indent"></div><div class="tree-indent"></div><span class="tree-name">flux-kernel</span></div>
-                    <div class="tree-item"><span class="tree-name">build.sh</span></div>
-                    <div class="tree-item"><span class="tree-name">linker.ld</span></div>
-                    <div class="tree-item"><span class="tree-name">LICENSE.md</span></div>
-                    <div class="tree-item"><span class="tree-name">README.md</span></div>
-                </div>
-
-                <h3>Key Components</h3>
-                <p><strong>boot.s:</strong> Sets up the Multiboot header, switches to 32-bit Protected Mode, sets up a stack, and jumps to <code>kernel_main</code>.</p>
-                <p><strong>kernel.c:</strong> Parses the Multiboot info structure provided by GRUB. Handles the switch from text to graphics mode.</p>
-                <p><strong>gfx.c:</strong> A software rasterizer. All drawing (pixels, lines, rectangles, text) is calculated by the CPU and written directly to the framebuffer.</p>
+                <h3>Key Modifications</h3>
+                <p>Flux-OS represents a complete reimagining of what a Linux desktop can be:</p>
+                <ul>
+                    <li><strong>Radical Simplification:</strong> Removed unnecessary packages, services, and bloat to create a lean experience</li>
+                    <li><strong>Custom Desktop Environment:</strong> Heavily modified LXQt with our own visual language and design philosophy</li>
+                    <li><strong>Performance First:</strong> Optimized for speed, low memory usage, and responsiveness</li>
+                    <li><strong>Philosophy-Driven:</strong> Every decision rooted in the belief that less is more</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1031,15 +991,15 @@ DISPLAY=:1 qemu-system-i386 -m 512 -cdrom flux-os.iso -vga std</pre>
         const sysStats = document.getElementById('sys-stats');
         
         const bootLog = [
-            { text: "FLUX-OS BIOS v2.3.0", type: "normal" },
-            { text: "CPU: x86 Architecture Detected", type: "success" },
-            { text: "Checking Memory... 524288KB OK", type: "success" },
-            { text: "Initializing VBE... Mode Not Found", type: "warn" },
-            { text: "Falling back to VGA Text Mode (80x25)", type: "normal" },
-            { text: "Loading Kernel...", type: "normal" },
-            { text: "Mounting Virtual File System...", type: "normal" },
-            { text: "Starting FluxWM...", type: "success" },
-            { text: "System Ready.", type: "success" }
+            { text: "FLUX-OS v1.0.0 (Ubuntu 24.04 LTS)", type: "normal" },
+            { text: "Initializing Flux Desktop Environment...", type: "normal" },
+            { text: "Loading LXQt Configuration...", type: "success" },
+            { text: "Checking System Resources...", type: "normal" },
+            { text: "Mounting Filesystems... OK", type: "success" },
+            { text: "Starting Window Manager (Openbox)...", type: "normal" },
+            { text: "Loading Custom Theme...", type: "normal" },
+            { text: "Initializing System Services...", type: "normal" },
+            { text: "Flux-OS Ready.", type: "success" }
         ];
 
         async function runBootSequence() {

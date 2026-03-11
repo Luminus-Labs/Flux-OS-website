@@ -1,7 +1,7 @@
 # FLUX-OS
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/974f59cd-c1bb-4972-8260-6917b9bb6685/deploy-status)](https://app.netlify.com/projects/flux-os/deploys)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-0.0.1--BETA-blue)
 ![Status](https://img.shields.io/badge/status-Active--Development-orange)
 
 **FLUX-OS** is a heavily customized, minimalist Linux-based operating system. It represents a philosophy of digital minimalism—stripping away the unnecessary to reveal something purer, leaner, and more intentional.
@@ -10,7 +10,7 @@
 
 ## 🚀 Current Status
 
-**Version:** 1.0.0  
+**Version:** 0.0.1--BETA 
 **Base:** Ubuntu 24.04 LTS (Lubuntu)  
 **Architecture:** amd64  
 **Desktop Environment:** Custom LXQt Modification  
